@@ -1,0 +1,57 @@
+.amp__is-hidden {
+  display: none;
+}
+
+.amp__mb1em {
+  margin-bottom: 1em;
+}
+
+.amp__mb2em {
+  margin-bottom: 2em;
+}
+
+.amp__pt1em {
+  padding-top: 1em;
+}
+
+.amp__pt2em {
+  padding-top: 2em;
+}
+
+.entry-content .psgal {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.entry-content .psgal figure {
+  margin-bottom: 1em;
+  flex-basis: 47%;
+}
+
+.entry-content .psgal figure amp-img,
+.entry-content .psgal figure amp-img[width|="0"],
+.entry-content .psgal figure amp-img[height|="0"],
+.entry-content .psgal figure amp-img[width|="1"],
+.entry-content .psgal figure amp-img[height|="1"] {
+  display: inherit;
+}
+
+.entry-content .psgal .photoswipe-gallery-caption {
+  padding-top: .7em;
+  font-size: 13px;
+}
+
+.entry-content .psgal .photoswipe-gallery-caption b {
+  color: var(--sub-color);
+}
+
+.entry-content .psgal .photoswipe-gallery-caption i {
+  color: var(--key-color);
+  font-weight: bold;
+}
+
+.entry-content .psgal figcaption {
+  font-size: 13px;
+  padding-top: 5px;
+}

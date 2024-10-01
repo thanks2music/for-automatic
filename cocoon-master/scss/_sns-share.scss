@@ -1,0 +1,266 @@
+///////////////////////////////////////
+// SNSボタン共通
+///////////////////////////////////////
+.sns-buttons{
+  display: flex;
+  align-items: center;
+
+  a{
+    // display: block;
+    // background-color: var(--cocoon-text-color);
+    // text-align: center;
+    // @include link_cancel(var(--cocoon-white-color));
+    // border-radius: var(--cocoon-basic-border-radius);
+    // height: 45px;
+
+    align-content: center;
+    align-items: center;
+    background-color: var(--cocoon-sns-color);
+    border-radius: var(--cocoon-basic-border-radius);
+    display: inline-flex;
+    font-size: 18px;//
+    justify-content: center;
+    height: 45px;
+    margin-bottom: 8px;
+    position: relative;
+    text-align: center;
+    width: 32%;
+    @include link_cancel(var(--cocoon-white-color));
+
+    &:hover{
+      opacity: 0.7;
+      color: var(--cocoon-white-color);
+      transition: $bgc_hover_anime;
+    }
+  }
+}
+///////////////////////////////////////
+// SNSシェアボタン
+///////////////////////////////////////
+.bc-brand-color-white{
+  a{
+    background-color: var(--cocoon-white-color);
+    border: 1px solid var(--cocoon-sns-color);
+    color: var(--cocoon-sns-color);
+    font-weight: 500;
+
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+}
+
+[class*="bc-brand-color"] .twitter-button {
+  --cocoon-sns-color: var(--cocoon-twitter-color);
+}
+
+[class*="bc-brand-color"] .facebook-button {
+  --cocoon-sns-color: var(--cocoon-facebook-color);
+}
+
+[class*="bc-brand-color"] .hatebu-button {
+  --cocoon-sns-color: var(--cocoon-hatebu-color);
+}
+
+[class*="bc-brand-color"] .google-plus-button {
+  --cocoon-sns-color: var(--cocoon-google-plus-color);
+}
+
+[class*="bc-brand-color"] .pocket-button {
+  --cocoon-sns-color: var(--cocoon-pocket-color);
+}
+
+[class*="bc-brand-color"] .line-button {
+  --cocoon-sns-color: var(--cocoon-line-color);
+}
+
+[class*="bc-brand-color"] .website-button {
+  --cocoon-sns-color: var(--cocoon-website-color);
+}
+
+[class*="bc-brand-color"] .instagram-button {
+  --cocoon-sns-color: var(--cocoon-instagram-color);
+}
+
+[class*="bc-brand-color"] .pinterest-button {
+  --cocoon-sns-color: var(--cocoon-pinterest-color);
+}
+
+[class*="bc-brand-color"] .youtube-button {
+  --cocoon-sns-color: var(--cocoon-youtube-color);
+}
+
+[class*="bc-brand-color"] .tiktok-button {
+  --cocoon-sns-color: var(--cocoon-tiktok-color);
+}
+
+[class*="bc-brand-color"] .linkedin-button {
+  --cocoon-sns-color: var(--cocoon-linkedin-color);
+}
+
+[class*="bc-brand-color"] .note-button {
+  --cocoon-sns-color: var(--cocoon-note-color);
+}
+
+[class*="bc-brand-color"] .soundcloud-button {
+  --cocoon-sns-color: var(--cocoon-soundcloud-color);
+}
+
+[class*="bc-brand-color"] .flickr-button {
+  --cocoon-sns-color: var(--cocoon-flickr-color);
+}
+
+[class*="bc-brand-color"] .amazon-button {
+  --cocoon-sns-color: var(--cocoon-amazon-color);
+}
+
+[class*="bc-brand-color"] .twitch-button {
+  --cocoon-sns-color: var(--cocoon-twitch-color);
+}
+
+[class*="bc-brand-color"] .rakuten-room-button {
+  --cocoon-sns-color: var(--cocoon-rakuten-room-color);
+}
+
+[class*="bc-brand-color"] .slack-button {
+  --cocoon-sns-color: var(--cocoon-slack-color);
+}
+
+[class*="bc-brand-color"] .github-button {
+  --cocoon-sns-color: var(--cocoon-github-color);
+}
+
+[class*="bc-brand-color"] .codepen-button {
+  --cocoon-sns-color: var(--cocoon-codepen-color);
+}
+
+[class*="bc-brand-color"] .feedly-button {
+  --cocoon-sns-color: var(--cocoon-feedly-color);
+}
+
+[class*="bc-brand-color"] .rss-button {
+  --cocoon-sns-color: var(--cocoon-rss-color);
+}
+
+.ss-top{
+  margin-top: 0;
+  margin-bottom: 0;
+
+  .sns-share-message{
+    display: none;
+  }
+}
+
+.sns-share{
+  //カラム数
+  &.ss-col-1 a{
+    width: 100%;
+  }
+
+  &.ss-col-2 a{
+    width: 49%;
+  }
+
+  &.ss-col-3 a{
+
+  }
+
+  &.ss-col-4 a{
+    width: 24%;
+  }
+
+  &.ss-col-5 a{
+    width: 19%;
+  }
+
+  &.ss-col-6 a{
+    width: 16%;
+  }
+
+  %high_and_low{
+    display: flex;
+    align-content: center;
+
+    line-height: 16px;
+    .social-icon,
+    .button-caption{
+      display: block;
+      font-size: 16px;
+      margin: 0;
+      &.button-caption{
+        font-size: 12px;
+      }
+    }
+  }
+
+  //ロゴ・キャプション配置
+  &.ss-high-and-low-lc a{
+    @extend %high_and_low;
+    flex-direction: column;
+    >span{
+      padding-top: 3px;
+    }
+  }
+
+  &.ss-high-and-low-cl a{
+    @extend %high_and_low;
+    flex-direction: column-reverse;
+  }
+}
+
+.sns-share-message{
+  @extend %sns_message;
+}
+
+$sns_button_margin_bottom: 8px;
+
+.sns-share-buttons{
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+
+  a{
+    // width: 32%;
+    // margin-bottom: $sns_button_margin_bottom;
+    // font-size: 18px;
+    // display: inline-flex;
+    // align-content: center;
+    // align-items: center;
+    // justify-content: center;
+    // position: relative;
+
+    .button-caption{
+      font-size: 16px;
+      margin-left: 10px;
+    }
+
+    .share-count{
+      @include service_count;
+    }
+  }
+}
+
+.share-menu-content .sns-share-buttons a{
+  width: 24%;
+}
+
+//シェア数の非表示
+.sbc-hide .share-count{
+  display: none;
+}
+
+/* メッセージ */
+.copy-info {
+  display: none;
+  /*初期状態は非表示*/padding: 1em 2em;
+  color: #fff;
+  border-radius: 8px;
+  /*画面上部に表示*/position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--cocoon-text-color);
+  opacity: 0.8;
+  box-shadow: 0 4px 8px var(--cocoon-x-pallid-text-color);
+  z-index: 2;
+}

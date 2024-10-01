@@ -1,0 +1,257 @@
+///////////////////////////////////////
+// 吹き出しスタイル
+///////////////////////////////////////
+.speech-wrap{
+  --cocoon-custom-background-color: var(--cocoon-white-color);
+  --cocoon-custom-text-color: var(--cocoon-text-color);
+  --cocoon-custom-border-color: var(--cocoon-basic-border-color);
+  display: flex;
+
+}
+
+.speech-person{
+  //float: left;
+  width: 12%;
+  min-width: 12%;
+}
+
+.speech-icon img,
+.speech-icon amp-img{
+  border-radius: 50%;
+  border: 2px solid var(--cocoon-basic-border-color);
+  width: 100%;
+}
+
+.speech-name{
+  text-align: center;
+  font-size: 13px;
+}
+
+div.speech-balloon{
+  height: 100%;
+  position: relative;
+  padding: 10px;
+  background-color:var(--cocoon-custom-background-color);
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--cocoon-custom-border-color);
+  color: var(--cocoon-custom-text-color);
+  border-radius: 6px;
+  max-width: calc(100% - 14%);
+  p{
+    margin: 0;
+  }
+}
+
+/* アイコンを左に表示 */
+.speech-balloon::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -12px;
+  top: 10px;
+  border-right-width: 12px;
+  border-right-style: solid;
+  border-right-color: var(--cocoon-custom-border-color);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+.speech-balloon::after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -9px;
+  top: 10px;
+  border-right-width: 12px;
+  border-right-style: solid;
+  border-right-color: var(--cocoon-custom-background-color);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+
+.sbp-l{
+  // margin-right: 100px;
+  .speech-balloon{
+    margin-left: 20px;
+  }
+}
+
+//画像位置
+.sbp-r{
+  flex-direction: row-reverse;
+  // margin-left: 100px;
+
+  .speech-balloon{
+    margin-right: 20px;
+    //margin-left: auto;
+  }
+
+  /* アイコンを右に表示 */
+  .speech-balloon::before{
+    right: -12px;
+    left: auto;
+    border-left-width: 12px;
+    border-left-style: solid;
+    border-left-color: var(--cocoon-custom-border-color);
+    border-right: none;
+  }
+  .speech-balloon::after{
+    right: -9px;
+    left: auto;
+    border-left-width: 12px;
+    border-left-style: solid;
+    border-left-color: var(--cocoon-custom-background-color);
+    border-right: none;
+  }
+
+}
+
+///////////////////////////////////////
+// アイコンスタイル
+///////////////////////////////////////
+.sbis-sn{
+  .speech-icon-image{
+    border-radius: 0;
+    border-style: none;
+    box-shadow: none;
+  }
+}
+
+.sbis-sb{
+  .speech-icon-image{
+    border-radius: 0;
+  }
+}
+
+.sbis-cn{
+  .speech-icon-image{
+    border-style: none;
+    box-shadow: none;
+  }
+}
+
+///////////////////////////////////////
+// 吹き出しスタイル
+///////////////////////////////////////
+.sbs-flat{
+  --cocoon-custom-background-color: #f1f1f1;
+  --cocoon-custom-border-color: #f1f1f1;
+  --cocoon-custom-text-color: var(--cocoon-text-color);
+  .speech-balloon{
+    background-color: var(--cocoon-custom-background-color);
+    border-color: var(--cocoon-custom-border-color);
+    color: var(--cocoon-custom-text-color);
+
+    &::before{
+      border-right-color: var(--cocoon-custom-border-color);
+    }
+    &::after{
+      border-right-color: var(--cocoon-custom-background-color);
+      // border-left-color: var(--cocoon-custom-background-color);
+    }
+  }
+}
+
+.sbs-line{
+  --cocoon-custom-background-color: var(--cocoon-white-color);
+  --cocoon-custom-border-color: var(--cocoon-basic-border-color);
+  --cocoon-custom-text-color: var(--cocoon-text-color);
+  .speech-balloon{
+    border-width: 1px;
+    background-color: var(--cocoon-custom-background-color);
+    border-color: var(--cocoon-custom-border-color);
+    color: var(--cocoon-custom-text-color);
+
+    &::after{
+      left: -10px;
+    }
+    &::before{
+      border-right-color: var(--cocoon-custom-border-color);
+    }
+    &::after{
+      border-right-color: var(--cocoon-custom-background-color);
+    }
+  }
+}
+
+.sbs-line.sbp-r{
+  --cocoon-custom-background-color: #85e249;
+  --cocoon-custom-border-color: #85e249;
+  // --cocoon-custom-text-color: var(--cocoon-text-color);
+  .speech-balloon{
+    background-color: var(--cocoon-custom-background-color);
+    border-color: var(--cocoon-custom-border-color);
+    color: var(--cocoon-custom-text-color);
+
+    &::after{
+      left: auto;
+      right: -10px;
+    }
+    &::before{
+      border-left-color: var(--cocoon-custom-border-color);
+    }
+    &::after{
+      border-left-color: var(--cocoon-custom-background-color);
+    }
+  }
+
+}
+
+///////////////////////////////////////
+// 考える吹き出し
+///////////////////////////////////////
+div.sbs-think{
+  // --cocoon-custom-background-color: transparent;
+  &.sbp-l{
+    // margin-right: 126px;
+    .speech-balloon{
+      margin-left: 46px;
+    }
+  }
+  .speech-balloon{
+
+    &::before {
+      border-width: 2px;
+      border-style: solid;
+      border-color: var(--cocoon-custom-border-color);
+      background-color: var(--cocoon-custom-background-color);
+      border-radius: 50%;
+      left: -29px;
+      top: 11px;
+      width: 20px;
+      height: 20px;
+    }
+
+    &::after {
+      border-width: 2px;
+      border-style: solid;
+      border-color: var(--cocoon-custom-border-color);
+      background-color: var(--cocoon-custom-background-color);
+      border-radius: 50%;
+      left: -44px;
+      top: 25px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+.sbs-think.sbp-r{
+  // margin-left: 126px;
+  .speech-balloon{
+    margin-right: 46px;
+
+    &::before {
+      left: auto;
+      right: -29px;
+    }
+
+    &::after {
+      left: auto;
+      right: -44px;
+    }
+  }
+}
